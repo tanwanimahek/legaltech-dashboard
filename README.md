@@ -169,6 +169,10 @@ Screenshots available in the `/screenshot` folder:
 - No backend or API integration
 
 ---
+## 🌐 Live Demo
+https://legaltech-dashboard-vercel.vercel.app
+
+---
 
 Built by **Mahek Tanwani** — showcasing frontend architecture, UI design, and authentication flows.
 
