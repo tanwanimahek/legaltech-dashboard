@@ -1,37 +1,169 @@
+# ⚖️ LegalTech Dashboard (Frontend Only)
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+A **frontend-only LegalTech dashboard application** built using **Next.js (App Router)** and **shadcn/ui**, implementing authentication, role-based access, protected routes, and a clean professional UI — **without any backend or external APIs**.
 
-## Getting Started
+This project was developed as part of an **internship assignment** to demonstrate frontend architecture, state management, validation, and real-world LegalTech use cases.
 
-First, run the development server:
+---
+
+## 🚀 Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **UI Library:** shadcn/ui
+- **Styling:** Tailwind CSS
+- **State Management:** React Hooks + localStorage
+- **Data Source:** Local JSON file (`db.json`)
+- **Authentication:** Mock auth (no backend)
+
+❌ No backend  
+❌ No Firebase / Auth providers  
+❌ No external APIs  
+
+---
+
+## 🔐 Authentication Flow
+
+### 1️⃣ Signup
+- Fields:
+  - Full Name
+  - Email
+  - Phone Number
+  - Password
+  - Confirm Password
+  - Role (Judge / Advocate / Police / Clerk)
+- Validations:
+  - Valid email format
+  - 10-digit phone number
+  - Password ≥ 8 characters
+  - Passwords must match
+  - Role selection mandatory
+- On success:
+  - Mock OTP generated
+  - Redirects to OTP Verification
+
+---
+
+### 2️⃣ OTP Verification
+- 6-digit OTP input
+- Validates OTP from local storage
+- On success → user logged in and redirected to Dashboard
+
+---
+
+### 3️⃣ Login
+- Email + Password + Role selection
+- Credentials matched from `db.json`
+- On success → Dashboard
+- On failure → error message shown
+
+---
+
+## 🧭 Route Protection
+
+- Dashboard and all inner pages are **protected**
+- Unauthorized access redirects to `/login`
+- Authentication state stored in `localStorage`
+
+---
+
+## 📊 Dashboard Features
+
+### 🎯 Overview Cards
+- Total Cases
+- Pending Cases
+- Disposed Cases
+- Today’s Hearings
+
+### 📋 Recent Cases Table
+- Case ID
+- Case Title
+- Court
+- Status
+- Next Hearing Date
+
+---
+
+## 📚 Sidebar Navigation
+
+- Dashboard
+- Cases
+- Hearings
+- Profile
+- Logout
+
+✨ Active route highlighting  
+🌙 Dark Mode toggle included  
+
+---
+
+## 👤 Profile Page
+
+- Displays logged-in user details:
+  - Name
+  - Email
+  - Phone
+  - Role  
+- Read-only view
+
+---
+
+## 🎨 UI & UX Highlights
+
+- Clean, professional LegalTech theme
+- Fully responsive layout
+- Dark mode support
+- Loading states & smooth transitions
+- Consistent typography and spacing
+
+---
+
+## 🧪 Bonus Features
+
+- Role-based login
+- Dark mode toggle
+- Modular validation utilities
+- Clean component structure
+- Reusable UI components (shadcn)
+
+---
+
+## 🛠️ Getting Started Locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+Open in browser:
+👉 http://localhost:3000
+
+---
+
+## 📦 Project Structure
+
+```bash
+src/
+├── app/
+├── components/
+├── data/
+├── lib/
+├── utils/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📸 Screenshots
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Screenshots available in the /screenshots folder:
 
-## Learn More
+- Login
+- Signup
+- OTP Verification
+- Dashboard
+- Profile
+- Dark Mode
 
-To learn more about Next.js, take a look at the following resources:
+## 📌 Notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details
+- This is a frontend-only project
+- All data is mocked using local JSON
+- No backend or API integration
