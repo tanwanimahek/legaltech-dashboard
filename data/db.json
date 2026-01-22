@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "name": "Amit Sharma",
+      "email": "amit@court.gov.in",
+      "phone": "9999999999",
+      "role": "judge",
+      "password": "Judge@123",
+      "otp": "123456"
+    },
+    {
+      "id": "u2",
+      "name": "Ravi Verma",
+      "email": "ravi@police.gov.in",
+      "phone": "8888888888",
+      "role": "police",
+      "password": "Police@123",
+      "otp": "654321"
+    }
+  ],
+  "dashboardStats": {
+    "totalCases": 245,
+    "pendingCases": 87,
+    "disposedCases": 132,
+    "todayHearings": 6
+  },
+  "cases": [
+    {
+      "caseId": "C-1023",
+      "title": "State vs Ramesh Kumar",
+      "status": "Pending",
+      "nextHearing": "2026-02-01",
+      "court": "Delhi High Court"
+    },
+    {
+      "caseId": "C-1041",
+      "title": "Cyber Fraud Case",
+      "status": "Hearing",
+      "nextHearing": "2026-01-22",
+      "court": "Sessions Court"
+    }
+  ]
+}
