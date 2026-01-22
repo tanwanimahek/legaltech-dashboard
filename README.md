@@ -140,7 +140,7 @@ Open in browser:
 
 ## 📦 Project Structure
 
-```bash
+```txt
 src/
 ├── app/
 ├── components/
@@ -153,7 +153,7 @@ src/
 
 ## 📸 Screenshots
 
-Screenshots available in the /screenshots folder:
+Screenshots available in the `/screenshot` folder:
 
 - Login
 - Signup
@@ -167,3 +167,8 @@ Screenshots available in the /screenshots folder:
 - This is a frontend-only project
 - All data is mocked using local JSON
 - No backend or API integration
+
+---
+
+Built by **Mahek Tanwani** — showcasing frontend architecture, UI design, and authentication flows.
+
